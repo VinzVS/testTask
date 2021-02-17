@@ -12,14 +12,14 @@ class Pagination
     public $countPages;
     public $uri;
     public $links = [
-        'back'=>'', // назад
-        'forward'=>'', //вперед
-        'startpage'=>'', //в начало
-        'endpage'=>'', //в конец
-        'page2left'=>'', // вторая ссылка влево
-        'pageleft'=>'', // ссылвка влево
-        'page2right'=>'', // вторая ссылка вправо
-        'pageright'=>'', // ссылка вправо
+        'back'=>'',
+        'forward'=>'',
+        'startpage'=>'',
+        'endpage'=>'',
+        'page2left'=>'',
+        'pageleft'=>'',
+        'page2right'=>'',
+        'pageright'=>'',
     ];
 
     public function __construct($page,$perpage,$total)
@@ -33,15 +33,15 @@ class Pagination
     }
 
     public function getHtml(){
-        $back = null; // ссылка НАЗАД
-        $forward = null; // ссылка ВПЕРЕД
-        $startpage = null; // ссылка В НАЧАЛО
-        $endpage = null; // ссылка В КОНЕЦ
-        $page2left = null; // вторая страница слева
-        $page1left = null; // первая страница слева
-        $page2right = null; // вторая страница справа
-        $page1right = null; // первая страница справа
-        // Здесь можно вставить константы и переместить код во вью если необходимо
+        $back = null;
+        $forward = null;
+        $startpage = null;
+        $endpage = null;
+        $page2left = null;
+        $page1left = null;
+        $page2right = null;
+        $page1right = null;
+
         if( $this->currentPage > 1 ){
             $back = "<li class='page-item'><a class='page-link' href='{$this->uri}page=" .($this->currentPage - 1). "'>&lt;</a></li>";
         }

@@ -5,14 +5,7 @@ class Router
 
 {
     protected static $routes=[];
-    /** Хранится таблица маршрутов  массив с параметром:
-     * [выражение]=> [controller => имяконтроллера, action => имяэкшена]
-     */
-    protected static $route=[]; // Текущий маршрут если найдено соответсвие
-    /**  controller => имяконтроллера
-     *   action => имяэкшена
-     */
-
+    protected static $route=[];
 
     public static function add( $regexp, $route=[]){
         self::$routes[$regexp]=$route;
