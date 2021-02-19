@@ -10,7 +10,6 @@
         <th scope="col"><a href="<?=PATH?>/main/index?sort=email&by=asc">&#9650</a><a href="<?=PATH?>/main/index?sort=email&by=desc">&#9660;</a><span class="pl-1">e-mail</span></th>
         <th scope="col">Текст задачи</th>
         <th scope="col"><a href="<?=PATH?>/main/index?sort=finish&by=asc">&#9650</a><a href="<?=PATH?>/main/index?sort=finish&by=desc">&#9660;</a><span class="pl-1">Статус</span></th>
-        <th scope="col">Редактированно</th>
         <?php if($admin):?>
         <th scope="col">действие</th>
         <?php endif;?>
@@ -22,8 +21,8 @@
         <td><?=$task['name']?></td>
         <td><?=$task['email']?></td>
         <td><?=$task['text']?></td>
-        <td><?=$task['finish'] ? 'Выполнено' : 'Новая' ?></td>
-        <td><?=$task['edit_admin'] ? 'Отредактировано' : 'Оригинал' ?></td>
+        <td><?=$task['finish'] ? 'Выполнено' : 'Новая' ?> <?=$task['edit_admin'] ? ' | Отредактировано администратором' : '' ?></td>
+
         <?php if($admin):?>
             <th scope="col"><a href="<?=PATH?>/main/edit?id=<?=$task['id']?>" class="btn btn-outline-primary">Редактировать</a> </th>
         <?php endif;?>

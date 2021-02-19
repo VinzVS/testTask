@@ -17,9 +17,9 @@
             <nav class="navbar navbar-light bg-light">
                 <a class="navbar-brand" href="<?=PATH?>">Главная</a>
                 <?php if($admin):?>
-                    <a class="navbar-brand btn btn-warning" href="login/logout">LogoutAdmin </a>
+                    <a class="navbar-brand btn btn-warning" href="<?=PATH?>/login/logout">LogoutAdmin </a>
                 <?php else:?>
-                    <a class="navbar-brand btn btn-warning" href="login/index">LoginAdmin </a>
+                    <a class="navbar-brand btn btn-warning" href="<?=PATH?>/login/index">LoginAdmin </a>
                 <?php endif;?>
 
             </nav>
